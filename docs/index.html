@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kohuSPL powered by KOHUTECH</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulasi Panel Surya</h1>
+        <div class="logo-container">
+            <img src="kohutech-logo.svg" alt="kohuSPL powered by KOHUTECH" class="logo">
+        </div>
+        
+        <div class="simulation-container">
+            <div class="controls">
+                <div class="control-group">
+                    <label for="sunlight-intensity">Intensitas Cahaya Matahari (%)</label>
+                    <input type="range" id="sunlight-intensity" min="0" max="100" value="80">
+                    <span id="intensity-value">80%</span>
+                </div>
+                
+                <div class="control-group">
+                    <label for="panel-efficiency">Efisiensi Panel (%)</label>
+                    <input type="range" id="panel-efficiency" min="10" max="30" value="20">
+                    <span id="efficiency-value">20%</span>
+                </div>
+                
+                <div class="control-group">
+                    <label for="panel-angle">Sudut Panel (derajat)</label>
+                    <input type="range" id="panel-angle" min="0" max="90" value="45">
+                    <span id="angle-value">45°</span>
+                </div>
+                
+                <div class="control-group">
+                    <label for="panel-area">Luas Panel (m²)</label>
+                    <input type="range" id="panel-area" min="1" max="20" value="5">
+                    <span id="area-value">5 m²</span>
+                </div>
+                
+                <div class="control-group">
+                    <label for="time-of-day">Waktu (jam)</label>
+                    <input type="range" id="time-of-day" min="6" max="18" value="12">
+                    <span id="time-value">12:00</span>
+                </div>
+                
+                <button id="toggle-animation">Mulai Simulasi</button>
+            </div>
+            
+            <div class="visualization">
+                <div class="sky">
+                    <div class="sun"></div>
+                    <div class="cloud cloud1"></div>
+                    <div class="cloud cloud2"></div>
+                </div>
+                
+                <div class="panel-container">
+                    <div class="solar-panel">
+                        <div class="panel-cells">
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                        </div>
+                    </div>
+                    <div class="panel-stand"></div>
+                </div>
+                
+                <div class="house">
+                    <div class="house-body"></div>
+                    <div class="house-roof"></div>
+                    <div class="house-door"></div>
+                    <div class="house-window"></div>
+                </div>
+                
+                <div class="ground"></div>
+            </div>
+        </div>
+        
+        <div class="output-container">
+            <h2>Output Energi</h2>
+            <div class="output-metrics">
+                <div class="metric">
+                    <span class="metric-label">Daya Saat Ini:</span>
+                    <span id="current-power" class="metric-value">0 W</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Energi Harian:</span>
+                    <span id="daily-energy" class="metric-value">0 kWh</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-label">Efisiensi Aktual:</span>
+                    <span id="actual-efficiency" class="metric-value">0%</span>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <canvas id="power-chart"></canvas>
+            </div>
+        </div>
+        
+        <div class="info-container">
+            <h2>Tentang Panel Surya</h2>
+            <p>Panel surya mengubah energi matahari menjadi listrik melalui efek fotovoltaik. Efisiensi panel, intensitas cahaya matahari, sudut panel, dan luas permukaan semuanya mempengaruhi jumlah energi yang dihasilkan.</p>
+            <p>Simulasi ini menunjukkan bagaimana faktor-faktor tersebut mempengaruhi output daya dari sistem panel surya.</p>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

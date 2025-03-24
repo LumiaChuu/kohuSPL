@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="50" viewBox="0 0 250 50">
+  <style>
+    .logo-text { font-family: 'Arial', sans-serif; font-weight: bold; }
+    .main-text { fill: #2c3e50; }
+    .powered-text { fill: #7f8c8d; font-size: 12px; }
+  </style>
+  <text x="10" y="30" class="logo-text main-text" font-size="24">kohuSPL</text>
+  <text x="120" y="30" class="logo-text powered-text">powered by</text>
+  <text x="120" y="45" class="logo-text main-text" font-size="18">KOHUTECH</text>
+</svg>
